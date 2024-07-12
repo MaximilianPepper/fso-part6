@@ -18,6 +18,7 @@ const AnecdotesList = () => {
     setTimeout(() => dispatch(newNotification(null)), 5000);
   };
   const sortedAnecdotes = [...anecdotes].sort((a, b) => b.votes - a.votes);
+
   return (
     <>
       {sortedAnecdotes.map((anecdote) => (
