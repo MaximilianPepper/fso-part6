@@ -9,8 +9,8 @@ const NewAnecdote = () => {
     const content = event.target.anecdote.value;
     event.target.anecdote.value = "";
     dispatch(newAnecdote(content));
-    dispatch(newNotification(`you created "${content}"`));
-    setTimeout(() => dispatch(newNotification(null)), 5000);
+    console.log(content);
+    dispatch(newNotification(`you created "${content}"`, 5));
   };
   return (
     <>
